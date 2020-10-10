@@ -4,17 +4,26 @@ import java.util.List;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import org.springframework.context.ConfigurableApplicationContext;
 
+
 import com.ashokit.repositories.ContactDtlsRepository;
+
+
 
 @SpringBootApplication
 public class Application {
 
-	public static void main(String[] args) {
-		ConfigurableApplicationContext ctxt = SpringApplication.run(Application.class, args);
+	
+public static void main(String[] args) {
+	
+	ConfigurableApplicationContext ctxt = SpringApplication.run(Application.class, args);
 
-		ContactDtlsRepository dtlsRepo = ctxt.getBean(ContactDtlsRepository.class);
+	
+System.out.println("Welcome to ashok it school");
+
+	ContactDtlsRepository dtlsRepo = ctxt.getBean(ContactDtlsRepository.class);
 		
 		List<String> names = dtlsRepo.getAllContactNames();
 		names.forEach(name -> {
